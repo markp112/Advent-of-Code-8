@@ -28,38 +28,38 @@ public class TestTheLayerClass {
         }
         return aTestString;
     }
-
-    @Test
-    public void givenALayer_CheckARowCanBeStored(){
-        String aTestString = buildATestStringImageWidthByLayerHigh(width,layers);
-        theTestLayer.buildLayer(aTestString);
-        assert(theTestLayer.get(0).length()) == 25;
-    }
-
-    @Test
-    public void givenALayer_CheckRowsAreAddedInSequence(){
-        theTestLayer = new Layer();
-        layers = 3;
-        String aTestString = buildATestStringImageWidthByLayerHigh(width,layers);
-        theTestLayer.buildLayer(aTestString);
-        assert(theTestLayer.length()) == 3;
-        assert(theTestLayer.get(0).toString().equals(aTestString.substring(0,25)));
-        assert(theTestLayer.get(1).toString().equals(aTestString.substring(25,50)));
-        assert(theTestLayer.get(2).toString().equals(aTestString.substring(50,75)));
-    }
-
-    @Test
-    public void givenAStringofNumberOfImageWidthbyLayersHigh_CheckTheseCanBeBuiltIntoLayerOfRows(){
-        final int width = 25;
-        final int layers = 6;
-        final int lastPosition = (width * layers) - 1;
-        String aTestString = buildATestStringImageWidthByLayerHigh(width,layers);
-        theTestLayer = new Layer();
-        theTestLayer.buildLayer(aTestString);
-        assert (theTestLayer.length()) == layers;
-        assert(theTestLayer.get(1).length()) == 25;
-        assert (theTestLayer.get(5).get(24)) == Character.getNumericValue(aTestString.charAt((lastPosition)));
-    }
+//
+//    @Test
+//    public void givenALayer_CheckARowCanBeStored(){
+//        String aTestString = buildATestStringImageWidthByLayerHigh(width,layers);
+//        theTestLayer.buildLayer(aTestString);
+//        assert(theTestLayer.get(0).length()) == 25;
+//    }
+//
+//    @Test
+//    public void givenALayer_CheckRowsAreAddedInSequence(){
+//        theTestLayer = new Layer();
+//        layers = 3;
+//        String aTestString = buildATestStringImageWidthByLayerHigh(width,layers);
+//        theTestLayer.buildLayer(aTestString);
+//        assert(theTestLayer.length()) == 3;
+//        assert(theTestLayer.get(0).toString().equals(aTestString.substring(0,25)));
+//        assert(theTestLayer.get(1).toString().equals(aTestString.substring(25,50)));
+//        assert(theTestLayer.get(2).toString().equals(aTestString.substring(50,75)));
+//    }
+//
+//    @Test
+//    public void givenAStringofNumberOfImageWidthbyLayersHigh_CheckTheseCanBeBuiltIntoLayerOfRows(){
+//        final int width = 25;
+//        final int layers = 6;
+//        final int lastPosition = (width * layers) - 1;
+//        String aTestString = buildATestStringImageWidthByLayerHigh(width,layers);
+//        theTestLayer = new Layer();
+//        theTestLayer.buildLayer(aTestString);
+//        assert (theTestLayer.length()) == layers;
+//        assert(theTestLayer.get(1).length()) == 25;
+//        assert (theTestLayer.get(5).get(24)) == Character.getNumericValue(aTestString.charAt((lastPosition)));
+//    }
 
     @Test
     public void givenALayer_CheckTheCountOfZerosWhenTheLayerIsBuiltWithAllZeros(){

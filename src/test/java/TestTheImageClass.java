@@ -4,8 +4,6 @@ import com.google.common.base.Stopwatch;
 
 import java.util.concurrent.TimeUnit;
 
-
-
 public class TestTheImageClass {
     Image theTestImage;
     @Test
@@ -15,11 +13,10 @@ public class TestTheImageClass {
         stopwatch.start();
         theTestImage = new Image();
         theTestImage.buildImage();
-        int layerToScan = theTestImage.getTheLayerWithTheLeastZeros();
-        int numberOfOnes = theTestImage.count(layerToScan,1);
-        int numberOfTwos = theTestImage.count(layerToScan,2);
+        int answer = theTestImage.getTheCountOfOnes() * theTestImage.getThecountOfTwos();
+
         stopwatch.stop();
-        System.out.println("stopwatch is" + stopwatch);
-        System.out.println("The Answer is " + numberOfOnes * numberOfTwos);
+        System.out.println("stopwatch is :" + stopwatch);
+        System.out.println("The Answer is " + answer );
     }
 }
