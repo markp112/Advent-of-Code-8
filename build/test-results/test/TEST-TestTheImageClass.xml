@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestTheImageClass" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-15T12:54:38" hostname="Marks" time="0.015">
+  <properties/>
+  <testcase name="givenAnImage_CheckTheLowestCountOfZerosInALayer" classname="TestTheImageClass" time="0.015"/>
+  <system-out><![CDATA[stopwatch is5.991 ms
+The Answer is 1905
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
