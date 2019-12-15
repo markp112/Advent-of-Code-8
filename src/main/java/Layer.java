@@ -1,8 +1,10 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Layer {
-    private List<Row> theLayer = new ArrayList<Row>();
+//    private List<Row> theLayer = new ArrayList<Row>();
+    private Row[] theLayer;
     private int countOfZerosInLayer = 0;
     private int countOfOnesInLayer = 0;
 
@@ -21,29 +23,38 @@ public class Layer {
     private int countOfTwosInLayer = 0;
 
 
-    public List<Row> getTheLayer() {
-        return theLayer;
-    }
+//    public List<Row> getTheLayer() {
+//        return theLayer;
+//    }
+    public Row[] getTheLayer() {
+    return theLayer;
+}
 
-    public void addARow(Row theRow){
-        theLayer.add(theRow);
-    }
+//    public void addARow(Row theRow){
+//        theLayer.add(theRow);
+//    }
 
     public int length(){
-        return theLayer.size();
+        return theLayer.length;
     }
 
+//    public Row get (int index){
+//        return theLayer.get(index);
+//    }
     public Row get (int index){
-        return theLayer.get(index);
+        return theLayer[index];
     }
 
     public void buildLayer(String aLayer){
         int sliceStart = 0;
+        int layerIndex = 0;
+        theLayer = new Row [aLayer.length()/25];
         for (int index = 25; index <= aLayer.length(); index += 25 ){
             Row aRow = new Row();
             String rowData = aLayer.substring(sliceStart, index);
             aRow.buildARow(rowData);
-            addARow(aRow);
+            theLayer[layerIndex++] = aRow;
+            //            addARow(aRow);
             this.countOfZerosInLayer += aRow.getCountOfZeros();
             this.countOfOnesInLayer += aRow.getCountOfOnes();
             this.countOfTwosInLayer += aRow.getCountOfTwos();
@@ -51,18 +62,18 @@ public class Layer {
         }
     }
 
-    public int countOfDigitsInLayer(int digitToMatch){
-        int theCountOfDigits = 0;
-        for (int row = 0; row < this.length(); row++ ){
-            theCountOfDigits += theLayer.get(row).getCountOfDigits(digitToMatch);
-        }
-        return theCountOfDigits;
-    }
+//    public int countOfDigitsInLayer(int digitToMatch){
+//        int theCountOfDigits = 0;
+//        for (int row = 0; row < this.length(); row++ ){
+//            theCountOfDigits += theLayer.get(row).getCountOfDigits(digitToMatch);
+//        }
+//        return theCountOfDigits;
+//    }
 
     @Override
     public String toString() {
         return "Layer{" +
-                "theLayer=" + theLayer +
+                "theLayer=" + Arrays.toString(theLayer) +
                 '}';
     }
 }

@@ -1,8 +1,10 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Row {
-    private List<Integer> theRow = new ArrayList<Integer>();
+//    private List<Integer> theRow = new ArrayList<Integer>();
+    private int[] theRow;
     private int countOfZeros = 0;
     private int countOfOnes = 0;
     private int countOfTwos = 0;
@@ -19,38 +21,29 @@ public class Row {
         return countOfTwos;
     }
 
-    public List<Integer> getTheRow() {
+    public int[] getTheRow() {
         return theRow;
     }
 
     public int length(){
-        return theRow.size();
+        return theRow.length;
     }
 
     public int get (int index){
-        return theRow.get(index);
+        return theRow[index];
    }
 
-    public void storeAPixel(int pixel){
-        theRow.add(pixel);
-    }
-
     public void buildARow(String aStringOfNumbers){
+        theRow = new int[aStringOfNumbers.length()];
          for(int index = 0; index < aStringOfNumbers.length(); index++){
             int aPixel = Character.getNumericValue(aStringOfNumbers.charAt(index));
-            storeAPixel(aPixel);
+            theRow[index] = aPixel;
             if (aPixel == 0) countOfZeros++; else if(aPixel == 1) countOfOnes++; else countOfTwos++;
         }
    }
 
-   public int getCountOfDigits(int digitToMatch) {
-        return (int)theRow.stream().filter(digit -> digit == digitToMatch).count();
-   }
-
     @Override
     public String toString() {
-        return "Row{" +
-                "theRow=" + theRow +
-                '}';
+        return (String)Arrays.toString(theRow).replaceAll("\\[|\\]|,|\\s", "");
     }
 }

@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d9df90d-3651-4451-b103-43f0eae9ff84" name="Default Changelist" comment="" />
+    <list default="true" id="5d9df90d-3651-4451-b103-43f0eae9ff84" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/TestTheImageClass.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/TestTheImageClass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Layer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Layer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Row.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Row.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestTheLayerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestTheLayerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestTheRowClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestTheRowClass.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +40,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UvRuQvgCoFVrx2uAK8ntHPwc2J" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -49,26 +64,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.TestTheImageClass.givenAnImage_CheckTheLowestCountOfZerosInALayer">
-    <configuration name="TestTheImageClass" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TestTheImageClass&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="TestTheImageClass.givenAnImage_CheckTheLowestCountOfZerosInALayer" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -89,12 +84,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestTheLayerClass.givenALayer_CheckTheCountOfZeros" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestTheLayerClass.givenALayer_CheckARowCanBeStored" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TestTheLayerClass.givenALayer_CheckTheCountOfZeros&quot;" />
+        <option name="scriptParameters" value="--tests &quot;TestTheLayerClass.givenALayer_CheckARowCanBeStored&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -115,6 +110,26 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;TestTheLayerClass.givenALayer_CheckTheCountOfZerosWhenTheLayerIsBuilt8Zeros&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestTheLayerClass.givenALayer_CheckTheCountOfZerosWhenTheLayerIsBuiltWithAllZeros" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;TestTheLayerClass.givenALayer_CheckTheCountOfZerosWhenTheLayerIsBuiltWithAllZeros&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -172,10 +187,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.TestTheImageClass.givenAnImage_CheckTheLowestCountOfZerosInALayer" />
-        <item itemvalue="Gradle.TestTheImageClass" />
         <item itemvalue="Gradle.TestTheLayerClass.givenALayer_CheckTheCountOfZerosWhenTheLayerIsBuilt8Zeros" />
         <item itemvalue="Gradle.TestTheLayerClass.givenALayer_CheckTheCountOfZerosWhenTheLayerIsBuiltWithNoZeros" />
-        <item itemvalue="Gradle.TestTheLayerClass.givenALayer_CheckTheCountOfZeros" />
+        <item itemvalue="Gradle.TestTheLayerClass.givenALayer_CheckARowCanBeStored" />
+        <item itemvalue="Gradle.TestTheLayerClass.givenALayer_CheckTheCountOfZerosWhenTheLayerIsBuiltWithAllZeros" />
       </list>
     </recent_temporary>
   </component>
@@ -191,6 +206,17 @@
       <updated>1576235304566</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

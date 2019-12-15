@@ -4,14 +4,19 @@ import java.util.Random;
 
 public class TestTheLayerClass {
     Layer theTestLayer = new Layer();
+    final int width = 25;
+    int layers = 1;
+    final int lastPosition = (width * layers) - 1;
 
     private Row buildATestRow(){
         Row aTestRow = new Row();
         Random RANDOM = new Random();
+        String aTestString = "";
         for(int index = 0; index < 25; index++){
             int aRandomPixel = RANDOM.nextInt(2) + 0;
-            aTestRow.storeAPixel(aRandomPixel);
+            aTestString += aRandomPixel;
         }
+        aTestRow.buildARow(aTestString);
         return aTestRow;
     }
 
@@ -25,30 +30,22 @@ public class TestTheLayerClass {
     }
 
     @Test
-    public void givenALayer_CheckItHasALenghtOfZeroWhenInitialised(){
-        assert (theTestLayer.length()) == 0;
-    }
-
-    @Test
     public void givenALayer_CheckARowCanBeStored(){
-        Row aTestRow = buildATestRow();
-        theTestLayer.addARow(aTestRow);
+        String aTestString = buildATestStringImageWidthByLayerHigh(width,layers);
+        theTestLayer.buildLayer(aTestString);
         assert(theTestLayer.get(0).length()) == 25;
     }
 
     @Test
     public void givenALayer_CheckRowsAreAddedInSequence(){
         theTestLayer = new Layer();
-        Row rowOne = buildATestRow();
-        Row rowTwo  = buildATestRow();
-        Row rowThree  = buildATestRow();
-        theTestLayer.addARow(rowOne);
-        theTestLayer.addARow(rowTwo);
-        theTestLayer.addARow(rowThree);
+        layers = 3;
+        String aTestString = buildATestStringImageWidthByLayerHigh(width,layers);
+        theTestLayer.buildLayer(aTestString);
         assert(theTestLayer.length()) == 3;
-        assert(theTestLayer.get(0).toString().equals(rowOne.toString()));
-        assert(theTestLayer.get(1).toString().equals(rowTwo.toString()));
-        assert(theTestLayer.get(2).toString().equals(rowThree.toString()));
+        assert(theTestLayer.get(0).toString().equals(aTestString.substring(0,25)));
+        assert(theTestLayer.get(1).toString().equals(aTestString.substring(25,50)));
+        assert(theTestLayer.get(2).toString().equals(aTestString.substring(50,75)));
     }
 
     @Test
@@ -69,7 +66,7 @@ public class TestTheLayerClass {
         String aStringOfZeros = new String(new char[150]).replace('\0', '0');
         theTestLayer = new Layer();
         theTestLayer.buildLayer(aStringOfZeros);
-        assert (theTestLayer.countOfDigitsInLayer(0)) == 150;
+        assert (theTestLayer.getCountOfZerosInLayer()) == 150;
     }
 
 
@@ -78,7 +75,7 @@ public class TestTheLayerClass {
         String aStringWithNoZeros = new String(new char[150]).replace('\0', '1');
         theTestLayer = new Layer();
         theTestLayer.buildLayer(aStringWithNoZeros);
-        assert (theTestLayer.countOfDigitsInLayer(0)) == 0;
+        assert (theTestLayer.getCountOfZerosInLayer()) == 0;
     }
 
     @Test
@@ -87,6 +84,6 @@ public class TestTheLayerClass {
         aStringWithZeros +=  new String(new char[142]).replace('\0', '1');
         theTestLayer = new Layer();
         theTestLayer.buildLayer(aStringWithZeros);
-        assert (theTestLayer.countOfDigitsInLayer(0)) == 8;
+        assert (theTestLayer.getCountOfZerosInLayer()) == 8;
     }
 }
